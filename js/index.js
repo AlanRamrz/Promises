@@ -86,3 +86,22 @@ suma10(50)
 .then(res => suma5(res))
 .then(res => console.log(res))
 .catch(error => console.log(error))
+
+
+setTimeout(() => {
+  console.log('Saludo');
+}, 4000)
+
+console.log('Despues de timeout');
+
+
+const timePromise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve('Promise timeout')
+  }, 2000)
+})
+
+timePromise
+.then(val => console.log(val))
+.then(() => console.log('After timeout'))
+.catch(error => console.log(error))
