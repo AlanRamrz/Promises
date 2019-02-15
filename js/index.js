@@ -35,13 +35,13 @@ const suma5 = (num) => {
 
 alanPromise
 .then(text => {
-  console.log(text);
+  console.log(text)
 })
 .catch(error => {
-  console.log(error);
+  console.log(error)
 })
 .finally(() => {
-  console.log('Anyway he works');
+  console.log('Anyway he works')
 })
 
 alanPromise2(1000)
@@ -61,14 +61,14 @@ suma10(30)
 .then(res => {
   suma5(res)
   .then(res => {
-    console.log(res);
+    console.log(res)
   })
   .catch(error => {
-    console.log(error);
+    console.log(error)
   })
 })
 .catch(error => {
-  console.log(error);
+  console.log(error)
 })
 
 suma10(50)
@@ -76,17 +76,13 @@ suma10(50)
   return suma5(res)
 })
 .then(res => {
-  console.log(res);
+  console.log(res)
 })
 .catch(error => {
-  console.log(error);
+  console.log(error)
 })
 
 suma10(50)
 .then(res => suma5(res))
-.then(res => {
-  console.log('perrito: ' + res);
-})
-.catch(error => {
-  console.log(error);
-})
+.then(res => console.log(res))
+.catch(error => console.log(error))
